@@ -8,19 +8,133 @@
 	<title>IMPACT Festival</title>
   </head>
   <body>
-	<Header />
+	<Header theme="dark"/>
+	<main>
+		<section class="hero">
+			<div class="hero-content">
+				<img
+				class="hero-overlay"
+				src="/images/overlay.png"
+				alt="Impact festival 11-12 september 2026"
+			/>
+			<div class="red-text">
+				<p>MUSIC // ART // TALKS // WORKSOHPS // FOOD <br/>DESIGNED TO INCREASE OUT IMPACT</p>
+			</div>
+			<button class="buttons">
+			<a class="ticket-button1" href="tickets">TICKETS</a>
+			<a class="ticket-button2" href="tickets">TICKETS</a>
+			</button>
+
+			</div>
+		</section>
+	</main>
 	<h1>Welcome to Astro</h1>
 	<p>This is a starter template for building websites with Astro.</p>
   </body>
   </html>
 
   <style>
+
+	.red-text {
+color: red;	}
+
 	body {
 		font-family: Arial;
 		margin: 0;
 	}
 
+	.hero {
+		min-height: 100vh;
+		background-image: url("/images/koncert.png");
+		background-size: cover;
+		background-position: center;
+		padding: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-content {
+		display: flex;
+  		flex-direction: column;
+  		align-items: center;
+  		gap: 60px;
+	}
+
+	.hero-content {
+		color: white;
+		text-align: center;
+	}
+
+	.hero-overlay {
+		 width: 70%;
+  max-width: 1000px;
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+   background: none;
+   border: none;
+ 
+}
+
+.ticket-button1 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 18px 70px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.ticket-button1:hover {
+  background: #ff4d4d;
+  transition: 0.3s;
+}
+
+.ticket-button2 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 18px 70px;
+  background: rgba(255, 0, 0, 0);
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.ticket-button2:hover {
+  background: #ff4d4d;
+  transition: 0.3s;
+}
+
 	h1{
 		font-size:60px;
 	}
+
+	@font-face {
+		font-family: 'impact';
+		src: url('/fonts/CC79.ttf') format('truetype');
+	}
+
+	.impact-text {
+		font-family: 'impact';
+	}
+
+	@font-face {
+		font-family: 'festival';
+		src: url('/fonts/CC26.ttf') format('truetype');
+	}
+
+	.festival-text {
+		font-family: 'festival';
+	}
+
 	</style>
+
