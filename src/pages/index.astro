@@ -1,5 +1,6 @@
 ---
 	import Header from '../components/Header.astro';
+	import Footer from "../components/Footer.astro";
 ---
 <html lang="en">
   <head>
@@ -8,7 +9,7 @@
 	<title>IMPACT Festival</title>
   </head>
   <body>
-	<Header theme="dark"/>
+	<Header theme="transparent"/>
 	<main>
 		<section class="hero">
 			<div class="hero-content">
@@ -22,7 +23,7 @@
 			</div>
 			<button class="buttons">
 			<a class="ticket-button1" href="tickets">TICKETS</a>
-			<a class="ticket-button2" href="tickets">TICKETS</a>
+			<a class="ticket-button2" href="program">PROGRAM</a>
 			</button>
 
 			</div>
@@ -30,6 +31,7 @@
 	</main>
 	<h1>Welcome to Astro</h1>
 	<p>This is a starter template for building websites with Astro.</p>
+	<Footer />
   </body>
   </html>
 
@@ -41,6 +43,11 @@ color: red;	}
 	body {
 		font-family: Arial;
 		margin: 0;
+	}
+
+	p {
+		font-size: 22px;
+		font-weight: bold;
 	}
 
 	.hero {
@@ -58,7 +65,7 @@ color: red;	}
 		display: flex;
   		flex-direction: column;
   		align-items: center;
-  		gap: 60px;
+  		gap: 0px;
 	}
 
 	.hero-content {
@@ -67,7 +74,7 @@ color: red;	}
 	}
 
 	.hero-overlay {
-		 width: 70%;
+		 width: 100%;
   max-width: 1000px;
   height: auto;
 }
