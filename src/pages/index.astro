@@ -28,6 +28,16 @@
 
 			</div>
 		</section>
+		<section class="img-wall">
+			<img src="/images/collage/img1.jpeg" alt="Collage of festival images" />
+			<img src="/images/collage/img2.webp" alt="Collage of festival images" />
+			<img src="/images/collage/img3.webp" alt="Collage of festival images" />
+			<img src="/images/collage/img4.webp" alt="Collage of festival images" />
+			<img src="/images/collage/img5.webp" alt="Collage of festival images" />
+			<img src="/images/collage/img6.webp" alt="Collage of festival images" />
+			<img src="/images/collage/img7.webp" alt="Collage of festival images" />
+
+		</section>
 	</main>
 	<h1>Welcome to Astro</h1>
 	<p>This is a starter template for building websites with Astro.</p>
@@ -36,6 +46,31 @@
   </html>
 
   <style>
+
+	.img-wall {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 18px;
+		max-width: 93%;
+		align-items: center;
+		margin: 0 auto;
+		margin-top: 50px;
+	}
+
+.img-wall img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .img-wall {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 60px 20px;
+  }
+}
+
 
 	.red-text {
 color: red;	}

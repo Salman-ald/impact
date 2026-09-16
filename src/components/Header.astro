@@ -14,12 +14,17 @@ if (theme === "transparent") {
     <a class="logo" href="/">
         <img src={logo} alt="Logo" width="100" height="100">
     </a>
-    <nav>
+    <nav class="nav-menu">
         <a href="/about">ABOUT</a>
         <a href="/program">Program</a>
         <a href="/tickets">TICKETS</a>
         <a href="/newsletter">NEWSLETTER</a>
     </nav>
+
+    <button class="burger" aria-label="Open menu">
+        ☰
+    </button>
+
 </header>
 
 <style>
@@ -70,4 +75,91 @@ if (theme === "transparent") {
         text-decoration: none;
         font-size: 14px;
     }
+
+
+    .burger {
+        display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    }
+
+header.light .burger {
+    color: black;
+}
+
+header.transparent .burger {
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+     .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    gap: 30px;
+    z-index: 20;
+
+    /* Fade */
+    opacity: 40%;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    }
+
+    .nav-menu.open{
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 100%;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        padding: 30px;
+        box-sizing: border-box;
+        gap: 45px;
+    }
+ .nav-menu.open a{
+    color: white;
+        font-size: 30px;
+        text-decoration: none;
+    }
+
+
+    .burger {
+        display: block;
+        position: relative;
+        z-index: 30;
+    }
+
+    header:has(.nav-menu.open) .burger {
+    color: white;
+}
+}
+
 </style>
+
+<script>
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav-menu");
+
+    burger?.addEventListener("click", () => {
+        nav?.classList.toggle("open");
+    });
+</script>
